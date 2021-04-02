@@ -11,7 +11,7 @@ data = {
 'cc_cvv' : '432'
 }
 
-def send_request()
+def send_request():
     while True:
         response = requests.post(url, data = data)
         print(response)
@@ -26,3 +26,6 @@ for i in range(50):
 
 for i in range(50):
     threads[i].start()
+
+for i in range(50):
+    threads[i].join()
