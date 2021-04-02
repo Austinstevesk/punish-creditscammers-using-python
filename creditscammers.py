@@ -11,7 +11,18 @@ data = {
 'cc_cvv' : '432'
 }
 
+def send_request()
+    while True:
+        response = requests.post(url, data = data)
+        print(response)
 
-while True:
-    response = requests.post(url, data = data)
-    print(response)
+
+threads = []
+
+for i in range(50):
+    t = threading.Thread(target = send_request)
+    t.daemon = True
+    threads.append(t)
+
+for i in range(50):
+    threads[i].start()
