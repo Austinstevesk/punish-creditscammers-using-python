@@ -19,6 +19,7 @@ def send_request():
 
 threads = []
 
+#we want to send many requests at the same time using threads. We are creating 50 threads
 for i in range(50):
     t = threading.Thread(target = send_request)
     t.daemon = True
