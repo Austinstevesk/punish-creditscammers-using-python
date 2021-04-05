@@ -4,3 +4,6 @@
 -Since the owner of the website is charged to verify whether the credit card info entered is 
  legit, we can send as many requests as possible so that they can pay for this.
 -We used threading to have about 50 requests sent at a time 
+
+
+#You can also use get requets
